@@ -1,11 +1,10 @@
 import PropTypes from "prop-types"
 import StockItem, { CATEGORIES } from "../entities/StockItem"
-import { StockContext } from "../contexts/StockContext"
 import { useRef, useState } from "react"
 import useStock from "../hooks/useStock"
 
 ItemForm.propTypes = {
-  itemToUpdate: PropTypes.instanceOf(StockContext)
+  itemToUpdate: PropTypes.object
 }
 
 export default function ItemForm({ itemToUpdate }) {

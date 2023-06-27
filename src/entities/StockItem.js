@@ -1,5 +1,3 @@
-import { v4 as uuid } from "uuid"
-
 export const CATEGORIES = [
   "Jogos",
   "Livros",
@@ -9,7 +7,7 @@ export const CATEGORIES = [
 
 export default class StockItem {
   constructor({ name, description, quantity, price, category }) {
-    this.id = uuid()
+    this.id = Math.floor(Math.random() * 10000000)
     this.name = name
     this.description = description
     this.quantity = +quantity
